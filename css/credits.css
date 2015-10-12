@@ -1,0 +1,86 @@
+.credits {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 400px;
+  margin-left: -200px;
+  font: 300 30px/1 'Open Sans Condensed', sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  animation: 30s credits linear 1;
+}
+
+.act {
+  margin-bottom: 50px;
+  font-size: 50px;
+}
+
+.performance {
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.performer {
+  margin-bottom: 50px;
+  font-size: 35px;
+}
+
+@keyframes credits {
+  0% {
+    top: 100%;
+  }
+  100% {
+    top: -200%;
+  }
+}
+
+.gallery {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+#images {
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+}
+#images img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: rgb(0, 0, 0);
+    position: absolute;
+    top: 0;
+    left: -100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all linear 500ms;
+    -moz-transition: all linear 500ms;
+    -webkit-transition: opacity linear 500ms;
+}
+#images img:target {
+    left: 0;
+    z-index: 3;
+    opacity: 1;
+}
+#images img:first-child {
+    left: 0;
+    opacity: 1;
+}
+#slider {
+    background: rgba(88, 0, 0,.7);
+    padding: 7px;
+}
+#slider a {
+    text-decoration: none;
+    background: rgba(120,0,0,.8);
+    border: 1px solid white;
+    padding: 4px 6px;
+    color: white;
+}
+#slider a:hover {
+    background: rgb(152,0,0);
+}

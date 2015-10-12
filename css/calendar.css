@@ -1,0 +1,24 @@
+.year{  color:#D90000;  font-size:85px;}
+.relative{  position:relative;}
+.months{}
+.month{  margin-top:12px;}
+.months ul{  list-style:none;  margin:0px;  padding:0px; width: 100%;}
+.months ul li a{  float:left; width: 8.3%;  margin:0;  padding:0;  color:#888888;  text-decoration:none;  font-size:25px;  font-weight:bold;  text-transform:uppercase;}
+.months ul li a:hover, .months ul li a.active{  color:#D90000;}
+table{  border-collapse:collapse; width: 63%; margin: 0;}
+table td{  border:1px solid #A3A3A3;  background:rgba(213,213,213,1);  width:9%;  height:70px;}
+table td.today{  border:2px solid #D90000;  width:9%;  height:70px;}
+table td.padding{  background: none;  border:none;}
+table td:hover{  background:#C6C6C6;  cursor:pointer;}
+table th{  font-weight:normal;  color:#8C8C8C;}
+table td .day{  position:absolute;  color:#8C8C8C;  bottom:-35px;  right:4%;  font-weight:bold;  font-size:24.3pt;}
+table td .events{  position:relative;  width:9%;  height:0px;  margin:-44% 0px 0px;  padding:0px;}
+table td .events li{  width:10px;  height:10px;  float:left;  background:#000;  -moz-border-radius:10px;  -webkit-border-radius:10px;  border-radius:10px 10px 10px 10px;  margin-left:2%;  overflow:hidden;  text-indent:-3000px;}
+table td:hover .events{  position:absolute;  z-index: -1;  left:63%;  top:240px;  width:34%;  list-style:none;  margin:0px 0px 0px 1%;}
+table td:hover .events li{  height:auto;  margin: 0;  background-color: white;  line-height:40px;  font-weight:bold;  border:1px solid black;  text-indent:0;  width:100%;}
+table td:hover .events li:first-child{  padding-top: 20px;}
+table td .events div{  display: none;}
+table td:hover .events div{  display:block;  height: 60px;  width: 100%;  background-color: white;  padding-top: 20px;  -moz-border-radius:10px;  -webkit-border-radius:10px;  border-radius:10px 10px 10px 10px;  line-height:40px;  font-weight:bold;  border:1px solid black;}
+table td .daytitle{  display:none;}
+table td:hover .daytitle{  position:absolute;  left:63%;  top:190px;  width:34%; background: #C6C6C6;  border:1px solid black; -moz-border-radius:10px 10px 0 0;  -webkit-border-radius:10px 10px 0 0;  -khtml-border-radius:10px 10px 0 0;  border-radius:10px 10px 0 0;   list-style:none;  margin:0px 0px 0px 1%;  padding:0px;  color:#D90000;  font-size:31px;  display:block;  font-weight:bold;}
+.clear{  clear:both;}

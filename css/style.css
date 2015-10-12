@@ -1,0 +1,385 @@
+html, body{
+      height: 100%;
+	}
+	body {
+	  font-family: helvetica, sans-serif;
+	  background: #232323;
+	  margin: 0;
+	}
+	.centered {
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+	}
+	.sysMsg {
+	  background: #d5d5d5;
+	  color: red;
+	  font-weight: bold;
+	  padding: 2% 0;
+	  border: 1px solid black;
+	}
+	h1 {
+	  font-weight: bold;
+	}
+	h1.small_shadow {
+	  letter-spacing: .05em;
+	  text-shadow: 3px 3px 0px black;
+	}
+    header {
+      background: url('../pictures/top_curtain.png');
+      background-size: cover;
+      background-position: bottom center;
+      width: 100%;
+      position: relative;
+	  z-index: 4;
+      text-align: center;
+      color: white;
+    }
+
+
+    header h1 {
+	  margin: 0 auto 10px auto;
+      font-family: 'Sancreek', cursive;
+      font-size: 60px;
+      color: #d5d5d5;
+ 	  text-rendering: optimizeLegibility;
+    }
+	h1.title_shadow {
+	  letter-spacing: .05em;
+	  text-shadow: 5px 5px 0px black;
+	}
+
+    header ul {
+      background: rgba(0,0,0,0.5);
+	  padding: 0.35%;
+	  margin: 0 auto;
+	  text-align: center;
+    }
+    header li {
+      display: inline;
+	  padding: 0.35% 0.5% 0.35% 0.5%;
+	  list-style: none;
+    }
+    header li:hover {
+      background: rgba(0,0,0,0.8);
+    }
+    header a {
+	  display:inline-block;
+	  text-decoration: none;
+	  font-weight:bold;
+	  color: #d5d5d5;
+    }
+    .rideaux {
+      min-height: 100%;
+	  background-image: url("../pictures/rideau.jpg");
+	  background-size: cover;
+	  background-position: bottom;
+  	  position : relative;
+  	  padding-bottom: 3%;
+  	  overflow: hidden;
+    }
+    .rideau_gauche {
+	  width: 50%;
+	  height: 100%;
+	  background: url("../pictures/rideau_gauche.png");
+	  background-position: right;
+	  background-size: cover;
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  z-index: 3;
+	  transition: width 1s;
+	  -webkit-transition: width 1s;
+	  -moz-transition: width 1s;
+    }
+    .rideau_gauche:hover, .rideau_droit:hover, .speech_presenter, .act_nav li, .hide_show_act_infos{
+	  cursor: pointer;
+    }
+    .rideau_gauche_extends{
+	  width: 18%;
+    }
+    .rideau_droit {
+	  width: 50%;
+	  min-height: 100%;
+	  background: url("../pictures/rideau_droit.png");
+	  background-position: left;
+	  background-size: cover;
+	  position: absolute;
+	  top: 0;
+	  right: 0;
+	  z-index: 3;
+	  transition: width 1s;
+	  -webkit-transition: width 1s;
+	  -moz-transition: width 1s;
+    }
+    .rideau_droit_extends{
+	  width: 18%;
+    }
+
+    .speech_presenter{
+	  width: 20%;
+	  height: 85%;
+      position: absolute;
+      left: -70%;
+	  bottom: 0;
+	  z-index: 2;
+      transition: all 1.5s;
+      -webkit-transition: all 1.5s;
+	  -moz-transition: all 1.5s;
+    }
+	.speech_presenter_show {
+      left: 50%;
+      transform: translate(-50%, 0);
+	}
+	.speech {
+	  position: absolute;
+	  width: 100%;
+	  bottom: 50%;
+	  max-height: 50%;
+	  background-color: #d5d5d5;
+	  border:2px solid #555555;
+	  max-height: 38%;
+	  border-radius:100% 80%;
+	  -moz-border-radius:100% 100%;
+	  -webkit-border-radius:100% 80%;
+	  text-align: center;
+	  font-weight:bold;
+	  overflow: hidden;
+	}
+	.speech p{
+	  margin: 20px;
+	}
+	.speech h1{
+	  margin: 0;
+	  margin-top: -15px;
+	  padding: 0;
+      font-family: 'Sancreek', cursive;
+      font-size: 30px;
+      color: #999999;
+	}
+	.arrow{
+	  width:0;
+	  height:0;
+	  line-height:0;
+	  border-bottom:40px solid transparent;
+	  border-left:40px solid transparent;
+	  border-right:40px solid #d5d5d5;
+	  position:absolute;
+	  top:-10px;
+      right: 50%;
+      transform: translate(-39%, 0);
+	}
+	.arrow_border{
+	  width:0;
+	  height:0;
+	  line-height:0;
+	  border-bottom:40px solid transparent;
+	  border-left:40px solid transparent;
+	  border-right:40px solid #555555;
+	  position:absolute;
+	  top:-6px;
+      right: 50%;
+      transform: translate(-37%, 0);
+	  z-index: -1;
+	}
+	.presenter {
+	  width: 100%;
+	  height: 50%;
+	  text-align: center;
+	  position: absolute;
+	  bottom: 2%;
+	}
+	.presenter img {
+	  max-width: 100%;
+	  max-height: 100%;
+	}
+	
+    .container {
+	  width: 70%;
+      min-height: 100%;
+	  margin: 0;
+	  margin-top: 1%;
+      position: relative;
+      left: 50%;
+      transform: translate(-50%, 0);
+	  z-index: 2;
+	  text-align: center;
+      transition: all 2s;
+      -webkit-transition: all 2s;
+	  -moz-transition: all 2s;
+	  color: white;
+    }
+    .container_hide {
+      left: -150%;
+    }
+	article {
+	  width: 49%;
+	  height: 250px;
+	  display: inline-block;
+	  background-size: cover;
+	  position: relative;
+	  border-radius: 12px;
+	}
+	.link_container{
+	  position: absolute;
+	  top: 0;
+	  width: 100%;
+	  height: 100%;
+	  border-radius: 12px;
+	  opacity: 0;
+	}
+	.link_container a{
+	  display: block;
+	  width: 100%;
+	  height: 100%;
+	  background: url("../pictures/info.png") no-repeat center;
+	  text-align: center;
+	  text-decoration: none;
+	  color: white;
+	  font-weight: bold;
+	  line-height: 170px;
+	}
+	.link_container .trailer_infos{
+	  background: url("../pictures/play.png") no-repeat center;
+	}
+	.link_container:hover{
+	  background: linear-gradient(bottom, rgba(0,0,0,0.5), rgba(0,0,0,.3));
+	  background: -webkit-linear-gradient(bottom, rgba(0,0,0,0.5), rgba(0,0,0,.3));
+	  background: -moz-linear-gradient(bottom, rgba(0,0,0,0.5), rgba(0,0,0,.3));
+	  opacity: 1;
+	}
+
+	article p {
+	  background: black;
+	  background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.6));
+	  background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.6));
+	  background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.6));
+	  width: 96%;
+	  height: 8%;
+	  margin: 0;
+	  padding: 2%;
+	  position: absolute;
+	  bottom: 3%;
+	  line-height: 28px;
+	  text-align: justify;
+	  overflow: hidden;
+	  color: white;
+	  transition: height .5s;
+	  -webkit-transition: height .5s;
+	  -moz-transition: height .5s;
+	}
+	article p:hover {
+		cursor: pointer;
+	}
+
+	small {
+	  opacity: 0;
+	}
+	.show-description p {
+	  height: 70%;
+	}
+
+	.show-description small {
+	  opacity: 1;
+	}
+	.first{
+	  background-image: url("../pictures/lagrosseB.jpg");
+	  opacity: 0.8;
+	}
+	.second{
+	  background-image: url("../pictures/extremites.jpg");
+	  opacity: 0.8;
+	}
+	.third{
+	  background-image: url("../pictures/fireJuggler.jpg");
+	  opacity: 0.8;
+	}
+	.four{
+	  background-image: url("../pictures/robotLightShow.jpg");
+	  opacity: 0.8;
+	}
+	.spectacle_name {
+	  float: right;
+	}
+
+    .container h1{
+	  margin: 0;
+      font-family: 'Sancreek', cursive;
+    }
+	.container_shadow { 
+	  letter-spacing: .05em;
+	  text-shadow: 4px 4px 0px black;
+	}
+    .container h3{
+	  margin: 0;
+	  margin-bottom: 10px;
+    }
+	.act_nav {
+	  width: 100%;
+	  margin-bottom: -35px;
+	  padding: 0px;
+      color:rgb(213, 213, 213);
+	}
+    .act_nav ul {
+      width: 100%;
+      background: rgba(80,0,0,.7);
+      padding: 0;
+	  text-align: center;
+	  -moz-border-radius: 40px 40px 0px 0px;
+	  -webkit-border-radius: 25px 25px 0px 0px;
+	  border-radius: 40px 40px 0px 0px;
+    }
+    .act_nav li {
+      width: 48%;
+      display: inline-block;
+      padding: 1%;
+      list-style: none;
+    }
+    .act_nav li:hover {
+      background: rgba(88,0,0,.8);
+	  -moz-border-radius: 40px 40px 0px 0px;
+	  -webkit-border-radius: 25px 25px 0px 0px;
+	  border-radius: 40px 40px 0px 0px;
+    }
+    p.act_info{
+      margin: 0;
+	  background: linear-gradient(bottom, rgba(213,213,213,1), rgba(213,213,213,.6));
+	  background: -webkit-linear-gradient(bottom, rgba(80,0,0,1), rgba(80,0,0,.6));
+	  background: -moz-linear-gradient(bottom, rgba(213,213,213,1), rgba(213,213,213,.6));
+      padding: 2%;
+      text-align: justify;
+      color:rgb(213, 213, 213);
+    }
+    .hide_show_act_infos{
+      background: rgb(80,0,0);
+      width: 98%;
+      padding: 1%;
+      color:rgb(213, 213, 213);
+	  -moz-border-radius: 0 0 25px 25px;
+	  -webkit-border-radius: 0 0 25px 25px;
+	  border-radius: 0 0 40px 40px;
+    }
+    .hide_show_act_infos:hover{
+      background: rgb(88,0,0);
+    }
+
+
+    .screen {
+	  width: 70%;
+	  background-color: rgba(0,0,0,.5);
+	  text-align: center;
+      color: black;
+	  padding: 10px;
+      position: relative;
+      left: 50%;
+      transform: translate(-50%, 0);
+	  z-index: 2;
+      -moz-box-shadow: 0px 0px 10px 2px #000000;
+      -webkit-box-shadow: 0px 0px 10px 2px #000000;
+      box-shadow: 0px 0px 10px 2px #000000;
+    }
+
+
+	footer {
+		clear: both;
+	}
